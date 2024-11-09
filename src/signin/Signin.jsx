@@ -21,6 +21,7 @@ export const Signin = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const submitHandler = async (data) => {
         console.log(data)
+        console.log("complete")
         // signin(data)
         // .then((resp)=>{
         //     console.log(resp)
