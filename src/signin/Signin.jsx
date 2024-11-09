@@ -48,6 +48,15 @@ export const Signin = () => {
                         <input type="password" name="" required="" {...register("password")} />
                         <label>Password</label>
                     </div>
+                    <div class="user-box">
+                        <input type="number" name="" required="" {...register("phonenumber")} />
+                        <label>Number</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" name="" required="" {...register("address")} />
+                        <label>address</label>
+                    </div>
+
                     <span className="forgotpass align-left">Forgot password?</span>
                     <button className="signinbtn" type='submit'>Signin</button>
                 </form>
