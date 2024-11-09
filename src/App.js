@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Routes , Route} from 'react-router-dom';
 
+import { Navbar } from './Navbar';
+import {Landingpage} from "./landing/Landingpage";
+import { Signin } from "./signin/Signin";
+import { Login } from './login/Login';
+// import { Order } from './order/Order';
+import { Dashboard } from './dashboard/Dashboard';
+import { Profile} from './profile/Profile';
+import { Footer } from './footer/Footer';
+import { Error404 } from './error/Error404';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './b2.svg'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Navbar/>
+        <Routes>
+          <Route path="" element={<Landingpage/>}></Route>
+          <Route path="/landingpage" element={<Landingpage/>}></Route>
+          <Route path="/signin" element={<Signin/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+          {/* <Route path="/order" element={<Order/>}></Route> */}
+          <Route path="/dashboard" element={<Dashboard/>}></Route>
+          <Route path="/profile" element={<Profile/>}></Route>
+          <Route path = "/*" element = {<Error404/>}></Route>
+        </Routes>
+      <Footer/>
     </div>
   );
 }
