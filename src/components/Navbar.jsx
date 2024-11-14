@@ -1,8 +1,6 @@
 import React from 'react'
-import './assets/css/navbardesign.css'
+import '../assets/css/navbardesign.css'
 import { Link } from 'react-router-dom'
-import './b2.svg'
-import '../src/assets/css/bloodsyncsvg.css'
 export const Navbar = () => {
 
   return (
@@ -15,7 +13,7 @@ export const Navbar = () => {
             </Link>
           </div>
           <div className="navbarList">
-              <Link className='nav-link' to={"/signin"}><button>Partner</button></Link>
+              <Link className='nav-link' to={"/developer"}><button>Contact us</button></Link>
               <Link className='nav-link' to={"/login"}><button>Add kitchen</button></Link>
               <Link className='nav-link' to={"/order"}><button>Orders</button></Link>
           </div>

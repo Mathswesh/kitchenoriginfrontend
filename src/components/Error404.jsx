@@ -1,6 +1,5 @@
 import React from 'react'
 import '../assets/css/error404design.css'
-import abc from '../error/errorbg.jpg'
 export const Error404 = () => {
   return (
     <div>

@@ -1,10 +1,8 @@
 import React from 'react'
 import '../assets/css/footerdesign.css'
-import { Developers } from '../Developers'
 export const Footer = () => {
   return (
     <div>
-      <Developers/>
       <footer class="footer" id="contact">
         <div class="container">
           <div class="row">

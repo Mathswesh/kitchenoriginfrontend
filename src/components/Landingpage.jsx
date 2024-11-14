@@ -1,8 +1,5 @@
 import React from 'react'
 import '../assets/css/landingpagedesign.css'
-import sweet from '../assets/images/sweet.jpg'
-import sweet1 from '../assets/images/sweet1.jpg'
-
 import { motion, useScroll } from "framer-motion"
 
 function Component() {

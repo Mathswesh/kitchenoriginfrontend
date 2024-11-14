@@ -1,5 +1,5 @@
 import React from 'react'
-import './assets/css/developers.css'
+import '../assets/css/developers.css'
 export const Developers = () => {
   return (
     <div>
