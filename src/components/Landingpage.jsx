@@ -1,15 +1,17 @@
 import React from 'react'
 import '../assets/css/landingpagedesign.css'
 import { motion, useScroll } from "framer-motion"
+import { AppDownload } from './AppDownload';
 
 function Component() {
     const { scrollYProgress } = useScroll();
-    return(
+    return (
         <motion.div style={{ scaleX: scrollYProgress }} />
     )
 }
 export const Landingpage = () => {
     return (
+
         <div className='landingpagejsx'>
             <div className="landingpagefront">
                 <div className="landingpagelogo">Kitchenorigin</div>
@@ -50,6 +52,7 @@ export const Landingpage = () => {
                     </div>
                 </div>
             </div>
+            <AppDownload/>
         </div>
     )
 }

@@ -1,79 +1,131 @@
 .navbarjsx{
-	height: 80px;
-	width: 1200px;
+	min-height: 10vh;
 	overflow-x: hidden;
-	display: flex;
-	justify-content: center;
 	color: white;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	background-color: purple;
+	padding: 20px;
+	animation: fadeIn 1s;	
 }
-.navbarContent {
+.logo{
+	font-size: 30px;
+}
+/* navbar */
+.navbarjsx nav{
+	background-color: purple;
+	height: 10vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: row;
 }
-.logo {
-	font-size: 30px;
-	margin-left: 50px;
-	transition: .7s ease-in-out;
-}
-.logo:hover {
-	transition: .5s ease-in;
-}
-.navbarList{
-	width: 750px;
+.navbarjsx nav{
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	justify-content: right;
-	flex-direction: row
+}
+.navbarjsx nav  .navbar{
+	/* to get center */
+	padding-right: 30px;
+	margin-top: 15px; 
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.navbarjsx nav ul li{
+	height: 30px;
 }
 /* button */
-.navbarList  button {
-	padding: 0.8em 1.8em;
+.navbarjsx .navbar button {
+	padding: 0.0em 2em;
 	border: none;
 	position: relative;
 	overflow: hidden;
 	background-color: transparent;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 15px;
 	transition: .3s;
-	z-index: 1;
 	font-family: inherit;
 	color:white;
 }
-
-.navbarList button::before {
+.navbarjsx .navbar button::before {
 	content: '';
 	width: 0;
 	height: 300%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%) rotate(45deg);
+	transform: translate(-50%, -50%) rotate(15deg);
 	background:black;
 	transition: .5s ease;
 	display: block;
 	z-index: -1;
 }
 
-.navbarList button:hover::before {
-	width: 105%;
+.navbarjsx .navbar button:hover::before {
+	width: 125%;
 }
 
-.navbarList button:hover {
+.navbarjsx .navbar button:hover {
 	color: white;
 }
 
+/* sidebar */
+.sidebar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding-left: 0px;
+	height: 100vh;
+	width: 230px;
+	z-index: 999;
+	backdrop-filter: blur(50px);
+	box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+	display: none;
+	align-items: center;
+	justify-content:left;
+	flex-direction: column;
+	font-size: 20px;
+}
+.sidebar li .hamburger{
+	margin-top: 10px;
+	margin-left: 10px;
+	color: black;
+}
+.sidebar li .hamburger i:hover{
+	color: white;
+}
+
+.sidebar li{
+	width: 100%;
+	margin-top: 10px;
+}
+.sidebar li button{
+	background-color: transparent;
+	color: black;
+	font-size: 20px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	/* border: 1px solid purple; */
+	width: 100%;
+	height: 50px;
+	padding-left: 10px;
+	text-align: left;	
+}
+.sidebar li button:hover {
+	background-color: purple;
+	color: white;
+	transition: ease .5s;
+}
+/* navbar mode */
 .navbarMode{
-	height: 10vh;
-	width: 15vw;
+	width: auto;
 	display: flex;
 	align-items: center;
 	flex-direction: row;
 	justify-content: center;
+	gap: 30px;
 }
 .navbarMode i{
 	font-size: 20px;
@@ -84,3 +136,85 @@
 	font-size: 20px;
 	color: black;
 }
+.navbarMode .dot{
+	position: absolute;
+	min-height: 10px;
+	min-width: 10px;
+	background-color: red;
+	border-radius: 5px;	
+} 
+@media only screen and ( max-width:1200px){
+	.navbarjsx{
+		padding: 20px;
+		width: 994px;
+	}
+}
+@media only screen and ( max-width:992px){
+	.navbarjsx{
+		padding: 20px;
+		width: 770px;
+	}
+	.navbarjsx nav  .navbar{
+		display: none;
+	}
+	.logo{
+		margin-right: 350px;
+	}	
+}
+/* responsive dessign */
+@media only screen and ( max-width:768px){
+	.navbarjsx{
+		padding: 5px;
+		width: 600px;
+	}
+	.navbarjsx nav  .navbar{
+		display: none;
+	}
+	.logo{
+		margin-right: 170px;
+	}		
+}
+@media only screen and ( max-width:600px){
+	.navbarjsx{
+		padding: 5px;
+		width: 500px;
+	}
+	.logo{
+		font-size: 20px;
+		margin-right: 150px;
+	}
+}
+@media only screen and ( max-width:468px){
+	.navbarjsx{
+		padding: 5px;
+		width: 360px;
+	}
+	.logo{
+		font-size: 20px;
+		margin-right: 60px;
+	}
+}
+@media only screen and ( max-width:350px){
+	.navbarjsx{
+		padding: 5px;
+		width: 350px;
+	}
+	.navbarjsx nav{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.logo{
+		font-size: 25px;
+		margin-right: 0px;
+	}
+}
+
+@keyframes fadeIn{
+	0%{
+	  opacity: 0;
+	}
+	100%{
+	  opacity: 1;
+	}
+  }

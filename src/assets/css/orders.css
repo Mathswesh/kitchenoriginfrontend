@@ -22,13 +22,19 @@
     border: 1px solid black;
     border-radius: 10px;
     background-color: whitesmoke;
-    box-shadow: 5px 5px black;
+    box-shadow:  5px 5px black;
     color:black;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .orderboxcircle:hover{
     background-color: plum;
     transition: .5s ease;
+    cursor: pointer;
+}
+
+.orderboxcircle img {
+    height: 110px;
 }

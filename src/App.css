@@ -1,12 +1,12 @@
 .App{
-    width: 1200px;
-    height: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
 }
 body,
 html {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }

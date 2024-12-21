@@ -21,7 +21,7 @@ export const Footer = () => {
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Shipping</a></li>
                 <li><a href="#">returns</a></li>
-                <li><a href="#">oeder status</a></li>
+                <li><a href="#">order status</a></li>
                 <li><a href="#">payment option</a></li>
               </ul>
             </div>
@@ -35,6 +35,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
+          <h6>©KitchenOrigins All rights are reserved. 2024</h6>
         </div>
       </footer>
     </div>

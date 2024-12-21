@@ -3,7 +3,7 @@ import '../assets/css/signindesign.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-// import { signin } from './services/userservice'
+import { userpost } from '../services/userservice'
 
 export const Signin = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -22,14 +22,14 @@ export const Signin = () => {
     const submitHandler = async (data) => {
         console.log(data)
         console.log("complete")
-        // signin(data)
-        // .then((resp)=>{
-        //     console.log(resp)
-        //     console.log("Done it is.")
-        // })
-        // .catch((errors)=>{
-        //     console.log("error",errors)
-        // })   
+        userpost(data)
+        .then((resp)=>{
+            console.log(resp)
+            console.log("Done it is.")
+        })
+        .catch((errors)=>{
+            console.log("error",errors)
+        })   
     }
     return (
         <div className='signinjsx'>
@@ -37,7 +37,7 @@ export const Signin = () => {
                 <h2>Signin</h2>
                 <form onSubmit={handleSubmit(submitHandler)}>
                     <div class="user-box">
-                        <input type="text" name="" required="" {...register("username")} />
+                        <input type="text" name="" required="" {...register("userName")} />
                         <label>Username</label>
                     </div>
                     <div class="user-box">
@@ -49,7 +49,7 @@ export const Signin = () => {
                         <label>Password</label>
                     </div>
                     <div class="user-box">
-                        <input type="number" name="" required="" {...register("phonenumber")} />
+                        <input type="number" name="" required="" {...register("phoneNumber")} />
                         <label>Number</label>
                     </div>
                     <div class="user-box">

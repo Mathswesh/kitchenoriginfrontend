@@ -1,0 +1,74 @@
+.caterarjsx{
+    height: auto;
+}
+.caterarjsx .container {
+    max-width: 1000px;
+    height:auto;
+    margin: 40px auto;
+    background: plum;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caterarjsx h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.caterarjsx .form-container {
+    width: 70%;
+}
+
+.caterarjsx .form-group {
+    margin-bottom: 15px;
+}
+
+.caterarjsx label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.caterarjsx .checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.caterarjsx .checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.caterarjsx .form-footer {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.caterarjsx .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #497e5e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.caterarjsx .btn:hover {
+    background-color: #3b694e;
+}
+
+.caterarjsx .clear {
+    clear: both;
+}

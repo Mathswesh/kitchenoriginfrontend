@@ -2,6 +2,7 @@
   overflow-x: hidden;
   width: 1200px;
   height: auto;
+  animation: fadeIn 1s;
 }
 
 .landingpagefront {
@@ -20,11 +21,13 @@
   border-bottom-right-radius: 50px;
 }
 .landingpagelogo{
+  animation: typing 2s;
   color: white;
   font-size: 100px;
   font-weight: bold;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
 .landingpagelogodata{
   color: white;
   font-size: 20px;
@@ -261,7 +264,6 @@
   width: 100%;
   height: 70vh;
 }
-
 .item {
   flex: 1;
   height: 100%;
@@ -346,4 +348,310 @@
   width: 200px;
   font-size: 25px;
   text-align: left;
+}
+
+/* responsive design */
+@media only screen and ( max-width:1200px){
+	.landingpagejsx {
+    overflow-x: hidden;
+    width: 992px;
+    height: auto;
+  }
+  .landingpagefront {
+    gap: 20px;
+    width: 992px;
+  }  
+  /* images */
+.landingpageimages .container {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 992px;
+}  
+/* 3rd page */
+.landingpagecollection{
+  width: 992px;
+  height: 70vh;
+}
+.landingpagecollection .container{
+  width: 992px;
+  height: 60vh;
+}
+.landingpagecollection .container .collection-wrap{
+  height: 60vh;
+  width: auto;
+}
+.collection{
+  height: 130px;
+  width: 300px;
+}
+
+}
+@media only screen and ( max-width:992px){
+	.landingpagejsx {
+    overflow-x: hidden;
+    width: 768px;
+    height: auto;
+  }
+  .landingpagefront {
+	  gap: 20px;
+    width: 768px;
+  } 
+  /* images */
+  .landingpageimages .container {
+    width: 768px;
+    height: 100vh;  
+  }
+  .item {
+    &:hover {
+      flex: 6;
+    }
+  }
+  /* second box */
+.landingpagecollection{
+  width: 768px;
+  height: 70vh;
+}
+
+.landingpagecollection .container{
+  width: 768px;
+  height: 60vh;
+}
+
+.landingpagecollection .container .collection-wrap{
+  display: flex;
+  height: 60vh;
+}
+.collection{
+  width: 230px;
+  font-size: 20px;
+}
+.collectionplace{
+  font-size: 30px;
+  text-align: left;
+}
+.collectioncount{
+  font-size: 20px;
+}
+
+}
+@media only screen and ( max-width:768px){
+	.landingpagejsx {
+    overflow-x: hidden;
+    width: 600px;
+    height: auto;
+  }
+  .landingpagefront {
+    gap: 20px;
+    width: 600px;
+  }
+  .landingpagelogo{
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  .landingpagelogodata{
+    color: white;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  /* images */
+.landingpageimages .container {
+  width: 600px;
+}
+.landingpageimages .container .gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+}
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+
+  &:hover {
+    flex: 4;
+  }
+}
+/* second box */
+.landingpagecollection{
+  width: 600px;
+  height: 70vh;
+}
+
+.landingpagecollection .container{
+  width: 600px;
+  height: 60vh;
+}
+
+.landingpagecollection .container .collection-wrap{
+  height: 60vh;
+  width: auto;
+}
+.collection{
+  height: 130px;
+  width: 173px;
+}
+.collectionplace{
+  margin-left: 10px;
+  width: 200px;
+  font-size: 20px;
+  text-align: left;
+}
+.collectioncount{
+  margin-left: 10px;
+  font-size: 15px;
+  width: 100%;
+} 
+}
+@media only screen and ( max-width:600px){
+  .landingpagejsx {
+    width: 500px;
+    height: auto;
+  }
+  .landingpagefront {
+    gap: 20px;
+    width: 500px;
+  }
+  .landingpagelogo{
+    font-size: 50px;
+  }
+  .landingpagelogodata{
+    font-size: 15px;
+  }
+/* images */
+.landingpageimages .container {
+  width: 468px;
+  height: 100vh;
+}
+.landingpageimages .container .gallery-wrap {
+  width: 100%;
+  height: 70vh;
+}
+.item {
+
+  &:hover {
+    flex: 2;
+  }
+}
+/* second box */
+.landingpagecollection{
+  width: 468px;
+  height: auto;
+}
+
+.landingpagecollection .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 486px;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.landingpagecollection .container .collection-wrap{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+}
+.collection{
+  height: 100px;
+  width: 100%;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 30px;
+  box-shadow: 5px 5px ;
+  text-align: left;
+}
+.collection:hover{
+  scale: 1.05;
+  transition: .5s ease;
+  background-color: purple;
+  color: white;
+  box-shadow: 5px 5px black;
+}
+.collectionplace{
+  margin-left: 10px;
+  width: 200px;
+  font-size: 35px;
+  text-align: left;
+}
+.collectioncount{
+  margin-left: 10px;
+  width: 200px;
+  font-size: 25px;
+  text-align: left;
+}
+
+
+}
+@media only screen and ( max-width:468px){
+  .landingpagejsx {
+    width: 360px;
+    height: auto;
+  }
+  .landingpagefront {
+    gap: 20px;
+    width: 360px;
+  }
+  .landingpagelogo{
+    font-size: 40px;
+  }
+  /* images */
+  .landingpageimages .container {
+    width: 350px;
+    height: 100vh;
+  }
+
+  .item {
+    &:hover {
+      flex: 2;
+    }
+  }
+  /* second box */
+  .landingpagecollection{
+    width: 350px;
+  }
+}
+@media only screen and ( max-width:350px){
+  .landingpagejsx {
+    overflow-x: hidden;
+    width: 350px;
+    height: auto;
+  }
+  .landingpagefront {
+    gap: 20px;
+    width: 350px;
+  }
+  .landingpagelogo{
+    color: white;
+    font-size: 40px;
+  }
+    /* images */
+.landingpageimages .container {
+  width: 350px;
+  height: 100vh;
+}
+
+.item {
+  &:hover {
+    flex: 2;
+  }
+}
+
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

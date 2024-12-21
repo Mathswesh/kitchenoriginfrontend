@@ -3,6 +3,7 @@ import '../assets/css/logindesign.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+
 export const Login = () => {
   // State to toggle password visibility
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -11,7 +12,9 @@ export const Login = () => {
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
+
   const { register, handleSubmit, formState: { errors } } = useForm();
+  
   const submitHandler = async (data) => {
       console.log(data)
   }
